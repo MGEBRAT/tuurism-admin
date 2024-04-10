@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "mains",
+  "info": {
+    "singularName": "main",
+    "pluralName": "mains",
+    "displayName": "Главная",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "mainText": {
+      "type": "string",
+      "required": true
+    },
+    "dateText": {
+      "type": "string",
+      "required": true
+    },
+    "daysText": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "moneyText": {
+      "type": "biginteger",
+      "required": true
+    }
+  }
+}

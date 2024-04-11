@@ -1,0 +1,34 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tours",
+  "info": {
+    "singularName": "tour",
+    "pluralName": "tours",
+    "displayName": "Tour"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "stars": {
+      "type": "decimal"
+    },
+    "daysText": {
+      "type": "string"
+    },
+    "img": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "Name": {
+      "type": "string"
+    },
+    "smallDescr": {
+      "type": "string"
+    }
+  }
+}

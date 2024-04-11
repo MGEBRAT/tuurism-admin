@@ -362,33 +362,6 @@ export interface AdminTransferTokenPermission extends Schema.CollectionType {
   };
 }
 
-export interface ApiMainMain extends Schema.CollectionType {
-  collectionName: 'mains';
-  info: {
-    singularName: 'main';
-    pluralName: 'mains';
-    displayName: '\u0413\u043B\u0430\u0432\u043D\u0430\u044F';
-    description: '';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    mainText: Attribute.String & Attribute.Required;
-    dateText: Attribute.String & Attribute.Required;
-    daysText: Attribute.String & Attribute.Required;
-    description: Attribute.Text & Attribute.Required;
-    moneyText: Attribute.BigInteger & Attribute.Required;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<'api::main.main', 'oneToOne', 'admin::user'> &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<'api::main.main', 'oneToOne', 'admin::user'> &
-      Attribute.Private;
-  };
-}
-
 export interface PluginUploadFile extends Schema.CollectionType {
   collectionName: 'files';
   info: {
@@ -815,6 +788,203 @@ export interface PluginI18NLocale extends Schema.CollectionType {
   };
 }
 
+export interface ApiAboutAbout extends Schema.SingleType {
+  collectionName: 'abouts';
+  info: {
+    singularName: 'about';
+    pluralName: 'abouts';
+    displayName: 'About';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    descr: Attribute.Text;
+    bafs1: Attribute.String;
+    bafs11: Attribute.String;
+    bafs2: Attribute.String;
+    bafs22: Attribute.String;
+    bafs3: Attribute.String;
+    bafs33: Attribute.String;
+    bafs4: Attribute.String;
+    bafs44: Attribute.String;
+    img1: Attribute.Media;
+    img2: Attribute.Media;
+    img3: Attribute.Media;
+    img4: Attribute.Media;
+    img5: Attribute.Media;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::about.about',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::about.about',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiCountryCountry extends Schema.CollectionType {
+  collectionName: 'countries';
+  info: {
+    singularName: 'country';
+    pluralName: 'countries';
+    displayName: 'Country';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    img: Attribute.Media;
+    name: Attribute.String;
+    numberTours: Attribute.BigInteger;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::country.country',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::country.country',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiFooterFooter extends Schema.SingleType {
+  collectionName: 'footers';
+  info: {
+    singularName: 'footer';
+    pluralName: 'footers';
+    displayName: 'Footer';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    email: Attribute.String;
+    number: Attribute.BigInteger;
+    icon: Attribute.Media;
+    link: Attribute.Text;
+    icon2: Attribute.Media;
+    link2: Attribute.Text;
+    icon3: Attribute.Media;
+    link3: Attribute.Text;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::footer.footer',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::footer.footer',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiMainMain extends Schema.CollectionType {
+  collectionName: 'mains';
+  info: {
+    singularName: 'main';
+    pluralName: 'mains';
+    displayName: '\u0413\u043B\u0430\u0432\u043D\u0430\u044F';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    mainText: Attribute.String & Attribute.Required;
+    dateText: Attribute.String & Attribute.Required;
+    daysText: Attribute.String & Attribute.Required;
+    description: Attribute.Text & Attribute.Required;
+    moneyText: Attribute.BigInteger & Attribute.Required;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<'api::main.main', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<'api::main.main', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+  };
+}
+
+export interface ApiTourTour extends Schema.CollectionType {
+  collectionName: 'tours';
+  info: {
+    singularName: 'tour';
+    pluralName: 'tours';
+    displayName: 'Tour';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    stars: Attribute.Decimal;
+    daysText: Attribute.String;
+    img: Attribute.Media;
+    Name: Attribute.String;
+    smallDescr: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<'api::tour.tour', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<'api::tour.tour', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+  };
+}
+
+export interface ApiTrackTrack extends Schema.CollectionType {
+  collectionName: 'tracks';
+  info: {
+    singularName: 'track';
+    pluralName: 'tracks';
+    displayName: 'track';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    sss: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::track.track',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::track.track',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 declare module '@strapi/types' {
   export module Shared {
     export interface ContentTypes {
@@ -825,7 +995,6 @@ declare module '@strapi/types' {
       'admin::api-token-permission': AdminApiTokenPermission;
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
-      'api::main.main': ApiMainMain;
       'plugin::upload.file': PluginUploadFile;
       'plugin::upload.folder': PluginUploadFolder;
       'plugin::content-releases.release': PluginContentReleasesRelease;
@@ -834,6 +1003,12 @@ declare module '@strapi/types' {
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
       'plugin::i18n.locale': PluginI18NLocale;
+      'api::about.about': ApiAboutAbout;
+      'api::country.country': ApiCountryCountry;
+      'api::footer.footer': ApiFooterFooter;
+      'api::main.main': ApiMainMain;
+      'api::tour.tour': ApiTourTour;
+      'api::track.track': ApiTrackTrack;
     }
   }
 }

@@ -1,0 +1,18 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tracks",
+  "info": {
+    "singularName": "track",
+    "pluralName": "tracks",
+    "displayName": "track"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "sss": {
+      "type": "string"
+    }
+  }
+}

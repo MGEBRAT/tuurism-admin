@@ -1,0 +1,18 @@
+{
+  "kind": "collectionType",
+  "collectionName": "eweweewes",
+  "info": {
+    "singularName": "eweweewe",
+    "pluralName": "eweweewes",
+    "displayName": "eweweewe"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "weew": {
+      "type": "string"
+    }
+  }
+}

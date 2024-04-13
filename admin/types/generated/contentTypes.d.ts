@@ -864,6 +864,74 @@ export interface ApiCountryCountry extends Schema.CollectionType {
   };
 }
 
+export interface ApiEweweeweEweweewe extends Schema.CollectionType {
+  collectionName: 'eweweewes';
+  info: {
+    singularName: 'eweweewe';
+    pluralName: 'eweweewes';
+    displayName: 'eweweewe';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    weew: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::eweweewe.eweweewe',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::eweweewe.eweweewe',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiFooteerFooteer extends Schema.SingleType {
+  collectionName: 'footeers';
+  info: {
+    singularName: 'footeer';
+    pluralName: 'footeers';
+    displayName: 'Footeer';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    email: Attribute.String;
+    number: Attribute.BigInteger;
+    icon22: Attribute.Text;
+    icon11: Attribute.Text;
+    icon3: Attribute.Media;
+    icon33: Attribute.Text;
+    icon1: Attribute.Media;
+    icon2: Attribute.Media;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::footeer.footeer',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::footeer.footeer',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiFooterFooter extends Schema.SingleType {
   collectionName: 'footers';
   info: {
@@ -935,6 +1003,7 @@ export interface ApiTourTour extends Schema.CollectionType {
     singularName: 'tour';
     pluralName: 'tours';
     displayName: 'Tour';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -945,6 +1014,10 @@ export interface ApiTourTour extends Schema.CollectionType {
     img: Attribute.Media;
     Name: Attribute.String;
     smallDescr: Attribute.String;
+    slug: Attribute.UID<'api::tour.tour', 'Name'>;
+    date: Attribute.String;
+    moneyText: Attribute.String;
+    BIGdescr: Attribute.Text;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -985,6 +1058,28 @@ export interface ApiTrackTrack extends Schema.CollectionType {
   };
 }
 
+export interface ApiWeweWewe extends Schema.SingleType {
+  collectionName: 'wewes';
+  info: {
+    singularName: 'wewe';
+    pluralName: 'wewes';
+    displayName: 'wewe';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    wewe: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<'api::wewe.wewe', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<'api::wewe.wewe', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+  };
+}
+
 declare module '@strapi/types' {
   export module Shared {
     export interface ContentTypes {
@@ -1005,10 +1100,13 @@ declare module '@strapi/types' {
       'plugin::i18n.locale': PluginI18NLocale;
       'api::about.about': ApiAboutAbout;
       'api::country.country': ApiCountryCountry;
+      'api::eweweewe.eweweewe': ApiEweweeweEweweewe;
+      'api::footeer.footeer': ApiFooteerFooteer;
       'api::footer.footer': ApiFooterFooter;
       'api::main.main': ApiMainMain;
       'api::tour.tour': ApiTourTour;
       'api::track.track': ApiTrackTrack;
+      'api::wewe.wewe': ApiWeweWewe;
     }
   }
 }

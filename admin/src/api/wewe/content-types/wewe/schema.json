@@ -1,0 +1,18 @@
+{
+  "kind": "singleType",
+  "collectionName": "wewes",
+  "info": {
+    "singularName": "wewe",
+    "pluralName": "wewes",
+    "displayName": "wewe"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "wewe": {
+      "type": "string"
+    }
+  }
+}

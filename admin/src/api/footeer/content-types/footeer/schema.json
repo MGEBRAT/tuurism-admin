@@ -1,0 +1,70 @@
+{
+  "kind": "singleType",
+  "collectionName": "footeers",
+  "info": {
+    "singularName": "footeer",
+    "pluralName": "footeers",
+    "displayName": "Footeer",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "email": {
+      "type": "string"
+    },
+    "number": {
+      "type": "biginteger"
+    },
+    "icon22": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "text",
+      "multiple": false
+    },
+    "icon11": {
+      "type": "text"
+    },
+    "icon3": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "icon33": {
+      "type": "text"
+    },
+    "icon1": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "icon2": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

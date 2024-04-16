@@ -832,6 +832,42 @@ export interface ApiAboutAbout extends Schema.SingleType {
   };
 }
 
+export interface ApiAlertAlert extends Schema.CollectionType {
+  collectionName: 'alerts';
+  info: {
+    singularName: 'alert';
+    pluralName: 'alerts';
+    displayName: 'Alert';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    name: Attribute.String;
+    famy: Attribute.String;
+    number: Attribute.BigInteger;
+    email: Attribute.String;
+    descr: Attribute.Text;
+    parol: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::alert.alert',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::alert.alert',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiCountryCountry extends Schema.CollectionType {
   collectionName: 'countries';
   info: {
@@ -1099,6 +1135,7 @@ declare module '@strapi/types' {
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
       'plugin::i18n.locale': PluginI18NLocale;
       'api::about.about': ApiAboutAbout;
+      'api::alert.alert': ApiAlertAlert;
       'api::country.country': ApiCountryCountry;
       'api::eweweewe.eweweewe': ApiEweweeweEweweewe;
       'api::footeer.footeer': ApiFooteerFooteer;
